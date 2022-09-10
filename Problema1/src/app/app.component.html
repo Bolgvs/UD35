@@ -1,0 +1,51 @@
+<div class="container m-5">
+
+  <div class="mb-4">
+    <h1>Alta Cliente</h1>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-1">
+      <label>Nombre:</label>
+    </div>
+    <div class="col-1">
+      <input type="text" [(ngModel)]="nombre" id="nombre" required>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-1">
+      <label>CIF:</label>
+    </div>
+    <div class="col-1">
+      <input type="text" [(ngModel)]="cif" id="cif" required>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-1">
+      <label>Dirección:</label>
+    </div>
+    <div class="col-1">
+      <input type="text" [(ngModel)]="direccion" id="direccion" required>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-1">
+      <label for="grupo">Grupo:</label>
+    </div>
+    <div class="col-1">
+
+      <select id="grupo" name="grupo" [(ngModel)]="grupo" autofocus>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+  </div>
+
+    <button class="btn h-100 border" (click)="altaCliente()">Guardar</button>
+
+    <app-lista [listaClientes]="infoCliente"></app-lista>
+</div>

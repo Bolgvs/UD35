@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <br>
+    <div class="row">
+      <h2>Formulario de contacto</h2>
+      <div>
+
+        <label for="name" class="me-2">Nombre:</label>
+        <input id="name" type="text" name="name" [(ngModel)]="name" placeholder="Nombre y Apellido"><br>
+        <span>{{nameError}}</span><br><br>
+
+        <label for="email" class="me-2">Email: </label>
+        <input id="email" type="email" name="email" [(ngModel)]="email" placeholder="ejemplo@dominio.com"><br>
+        <span>{{emailError}}</span><br><br>
+
+        <label for="msg" class="me-2">Mesaje:</label>
+        <input id="msg" type="text" name="msg" [(ngModel)]="msg"><br>
+        <span>{{msgError}}</span><br><br>
+
+        <label for="val" class="me-2">{{valLabel}}</label>
+        <input id="val" type="text" name="val" [(ngModel)]="val" placeholder="Respuesta"><br>
+        <span>{{valError}}</span><br><br>
+
+        <input type="button" value="Enviar" (click)="sendMsj()">
+      </div>
+    </div>
+    <br>
+    <app-lista [messages]="messages"></app-lista>
+</div>
+</body>
+</html>
